@@ -7,13 +7,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.beans.Employee;
 import model.beans.Employees;
 import model.persistance.dao.hibernate.EmpHiberDAO;
 import model.persistance.dao.jdbc.EmployeeDAO;
 import model.persistance.interfaces.Recuperable;
 import model.service.EmpleadoService;
 
+/**
+ * consulta un empleado por Id.
+ * 
+ * @author acandalez
+ *
+ */
 public class EmployeesServlet extends HttpServlet {
 
 	@Override

@@ -2,8 +2,6 @@ package model.beans;
 
 import java.io.Serializable;
 
-
-
 /**
  * The persistent class for the EMPLOYEES database table.
  * 
@@ -22,11 +20,13 @@ public class Employee implements Serializable {
 
 	private int salary;
 
+	private String email;
+
 	public Employee() {
 	}
-	
 
-	public Employee(int employeeId, int departmentId, String firstName, String lastName, int salary) {
+	public Employee(int employeeId, int departmentId, String firstName,
+			String lastName, int salary) {
 		super();
 		this.employeeId = employeeId;
 		this.departmentId = departmentId;
@@ -34,7 +34,6 @@ public class Employee implements Serializable {
 		this.lastName = lastName;
 		this.salary = salary;
 	}
-
 
 	public int getEmployeeId() {
 		return employeeId;
@@ -59,7 +58,6 @@ public class Employee implements Serializable {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-
 
 	public String getLastName() {
 		return lastName;
@@ -86,6 +84,14 @@ public class Employee implements Serializable {
 		// TODO Auto-generated method stub
 		return "Nombre empleado = " + this.firstName + " ID = "
 				+ this.employeeId;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
