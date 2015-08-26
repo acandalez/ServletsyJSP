@@ -11,7 +11,9 @@
     <h:body>
     	<h3>Bienvenido, vamos a mostrarte un empleado al introducir una ID ;-)</h3>
     	<h:form>
-    	   <h:inputText value="#{empleadoBean.empleado_id}"></h:inputText>
+    	   <h:inputText value="#{empleadoBean.empleado_id}" validatorMessage="Introducir una Id entre 100 y 207 ;)  .">
+    	   		<f:validateLongRange minimum="100" maximum="207"/>
+    	   </h:inputText>
     	   <h:commandButton value="Buscar" action="#{empleadoBean.cargarEmpleado}"></h:commandButton>
     	</h:form>
     </h:body>
